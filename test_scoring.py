@@ -18,3 +18,8 @@ def test_session_rating_boundary_90_is_great():
 
 def test_session_rating_boundary_59_is_skip():
     assert session_rating(59) == "Skip"
+
+
+def test_session_rating_out_of_range_is_not_slick():
+    assert session_rating(-1) == "Not slick"
+    assert session_rating(101) == "Not slick"
